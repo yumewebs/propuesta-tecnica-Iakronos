@@ -18,7 +18,7 @@ B --> C{Iakronos - PFO*}
 C --> D[Exchange]
 D -- Send Response --> C --> B --> A
 ```
-*PFO -- Process and Format Order
+>*PFO -- Process and Format Order
 
 - El cliente manda una request al bridge.
 - El bridge comprueba que el **user, name, account_id y la IP desde dónde se manda** es correcta, además de **la estructura del JSON**.
