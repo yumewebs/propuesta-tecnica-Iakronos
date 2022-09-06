@@ -20,20 +20,20 @@ D -- Send Response --> C --> B --> A
 ```
 >*PFO -- Process and Format Order
 
-- El cliente manda una request al bridge.
+- El cliente manda una **request al bridge**.
 - El bridge comprueba que el **user, name, account_id y la IP desde dónde se manda** es correcta, además de **la estructura del JSON**.
-- Una vez chequeada, esa solicitud se procesa dentro del bridge, y añade y cambia valores al JSON para mandarle una solicitud a Iakronos. Esa solicitud está procesada con claves que solamente los desarrolladores tienen, además que solamente se pueden generar ese tipo de solicitudes desde el bridge y con los valores procesados.
-- Iakronos chequea la solicitud y el JSON procesado por el bridge.
-- Cuándo haya aprobado la solicitud, Iakronos aplica diferentes filtros según la solicitud requerida, y la manda al Exchange.
-- La exchange ejecuta la solicitud, la manda a Iakronos. Por último, Iakronos se la manda al bridge y el bridge se encarga de mandarle los datos al cliente.
+- Una vez chequeada, esa **solicitud se procesa dentro del bridge**, y añade y cambia valores al JSON para **mandarle una solicitud a Iakronos**. Esa solicitud está procesada con claves que solamente los desarrolladores tienen, además que solamente se pueden generar ese tipo de solicitudes desde el bridge y con los valores procesados.
+- **Iakronos chequea la solicitud** y el JSON procesado por el bridge.
+- Cuándo haya aprobado la solicitud, Iakronos **aplica diferentes filtros** según la solicitud requerida, y **la manda al Exchange**.
+- **La exchange ejecuta la solicitud**, la manda a Iakronos. Por último, Iakronos se la manda al bridge y el bridge se encarga de mandarle los datos al cliente.
 
 ### Medidas para aumentar la seguridad:
-- Asignar en el Exchange, a la hora de crear las APIs, la IP proporcionada a el cliente para que solamente puedan ejecutar solicitudes a la Exchange nuestro sistema.
-- Proporcionarnos la IP desde dónde ejecutará solicitudes al bridge para configurarlo y que solamente esa IP pueda hacer consultas asociadas a ese user. *(próximamente)*
+- **Asignar** en el Exchange, a la hora de crear las APIs, **la IP proporcionada** a el cliente para que solamente puedan ejecutar solicitudes a la Exchange nuestro sistema.
+- **Proporcionarnos la IP** desde dónde ejecutará solicitudes al bridge para configurarlo y que solamente esa IP pueda hacer consultas asociadas a ese user. *(próximamente)*
 
 
 ## EJEMPLOS DE CONSULTAS:
-Imagina que quieres recoger los balances actuales de tu cuenta, para posteriormente hacer una operación. Y nosotros, después de que nos hayas proporcionado tus APIs y después de haberlas conectado a nuestra plataforma te hemos asignado el `account_id` 65.
+Imagina que **quieres recoger los balances actuales de tu cuenta**, para posteriormente hacer una operación. Y nosotros, después de que nos hayas proporcionado tus APIs y después de haberlas conectado a nuestra plataforma te hemos asignado el `account_id` 65.
 
 En lugar de tener que descargarte las librerías para poder conectarte a tu Exchange, crear las órdenes, leer la documentación y manejar y filtrar los datos obtenidos, solamente **con saber hacer una solicitud requests** podrás obtener los datos.
 
@@ -132,6 +132,6 @@ Con esta solicitud, el print te devolverá un JSON similar al siguiente:
 >dependiendo de la exchange a dónde sea la petición, o bien recibirás solamente los activos que tienes o recibirás todos los activos*
 
 
-A partir de aquí ya puedes procesar a tu gusto los datos recibidos. En la documentación que te proporcionaremos, tendrás una explicado que hace cada URL y que datos tienes que mandar mediante JSON.
+A partir de aquí **ya puedes procesar** a tu gusto **los datos recibidos.** En la documentación que te proporcionaremos, tendrás una explicado que hace cada URL y que datos tienes que mandar mediante JSON.
 
 Cómo has visto, te hemos ahorrado mucho trabajo, desde preparar la conexión con la exchange que deseas, hasta procesar las órdenes para cada exchange que quieras vincular.
