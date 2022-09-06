@@ -68,9 +68,10 @@ def fetchBalance(name, psswd, url, account_id):
 
 	return r.content
 
-print(fetchBalance(name, psswd, str(base_url + url_balance)) 	
+print(fetchBalance(name, psswd, str(base_url + url_balance), 65) 	
 ```
 >esto es sólo un ejemplo rápido*
+
 
 Con esta solicitud, el print te devolverá un JSON similar al siguiente:
 ```
@@ -129,6 +130,7 @@ Con esta solicitud, el print te devolverá un JSON similar al siguiente:
 }
 ```
 >dependiendo de la exchange a dónde sea la petición, o bien recibirás solamente los activos que tienes o recibirás todos los activos*
+
 
 A partir de aquí ya puedes procesar a tu gusto los datos recibidos. En la documentación que te proporcionaremos, tendrás una explicado que hace cada URL y que datos tienes que mandar mediante JSON.
 
